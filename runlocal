@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ $1 == "" ]]
+then
+  echo "Parameter 1 is required to be your email address"
+  echo "Please reissue the command as './runlocal {your_login_id} '"
+  exit -1
+elif [[ condition ]]; then
+  CRON_INTERVAL_FOR_DELETING_FILES=3600000
+  SNDEMAIL=$1
+  export SNDEMAIL
+  export CRON_INTERVAL_FOR_DELETING_FILES
+  printenv
+  npm start
+fi

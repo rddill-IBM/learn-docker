@@ -1,0 +1,57 @@
+ #!/bin/bash
+ 
+. ./common_OSX.sh
+    CLUSTER_NAME="TheCoach"
+    SOURCEDIR="/app/HTML/backups"
+    TARGETDIR="../HTML/backups/"
+if [ -z "$1" ]
+then
+    showStep "invocation format is: $0 {location of api key file} {region} If region is not specified, will default to us-south"
+    exit -1
+fi
+
+APIKEYFILE=$1
+if [ -z "$2" ]
+then
+    REGION="us-south"
+else
+    REGION=$2
+fi
+function doLogin()
+{
+    ibmcloud login --apikey @$APIKEYFILE -r $REGION
+}
+   function getContext()
+{
+    showStep "Retrieving Cluster configuration for $CLUSTER_NAME"
+    KUBECONFIG=$(ibmcloud ks cluster-config $CLUSTER_NAME | grep 'KUBECONFIG' | awk '{print $2}')
+    echo "KUBECONFIG to export is $KUBECONFIG"
+    export "$KUBECONFIG"
+}
+
+function displayWorkers()
+{
+    showStep "Retrieving Workers in $CLUSTER_NAME"
+    ibmcloud ks workers $CLUSTER_NAME
+}
+
+function getPods()
+{
+    showStep "Retrieving pods"
+    kubectl get pods
+    THECOACH=$(kubectl get pods | grep 'thecoach' | awk '{print $1}')
+    THEREVIEWER=$(kubectl get pods | grep 'coachviewer' | awk '{print $1}')
+    showStep "coach pod address: $THECOACH"
+    showStep "reviewer pod address: $THEREVIEWER"
+}
+
+function getFiles()
+{
+    showStep "Retrieving backup Files. Copying from ${SOURCEDIR} to ${TARGETDIR}"
+    kubectl cp default/${THECOACH}:${SOURCEDIR} ${TARGETDIR}   
+}
+doLogin
+getContext
+displayWorkers
+getPods
+getFiles

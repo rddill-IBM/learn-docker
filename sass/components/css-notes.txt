@@ -1,0 +1,33 @@
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 1fr 2fr 4fr 1fr;
+    // to name columns, insert arrays with names before and after column definitions
+    // in this case, because we're using a repeat instead of simple definitions, 
+    // css is smart enough to enumerate the names, which become the name-set
+    // col-start n ... col-endn where n iterates from 1 to the max repeat value
+    // usage: instead of: grid-column: 1 / 2
+    // we would specify: grid-column: col-start 1 / col-end 1
+    // usage: instead of: grid-column: 1 / 4
+    // we would specify: grid-column: col-start 1 / col-end 3
+    // grid-template-columns: repeat(4, [col-start], 1fr, [col-end]);
+    // to name rows, insert arrays with names before and after row definitions
+    // grid-template-rows: [header-start] 1fr [header-end box-start] 2fr [box-end main-start] 4fr [main-end footer-start] 1fr [footer-end];
+    // grid-row-gap: 2rem;
+    // grid-column-gap: 2rem;
+    // margin: 4rem auto;
+
+    // to name a grid area, we use the grid-template. 
+    // To do this, the grid-template must specifically identify each of the cells 
+    // defined by the grid. Note in this case that the three side-by-side "boxes" 
+    // require different names as each cell is unique. Where names are repeated
+    // that means that the content spans those cells with identical names.
+    // a dot (period) creates an un-named cell. 
+    // These are used for content that is not cell-specific
+    // 
+    // this is great for small pages, but cumbersome for large (50+ cell) pages 
+    // grid-template-areas: "head head head head"
+    //        "box-1 box-2 box-3 side"
+    //        "main main main side"
+    //        "foot foot foot foot";
+    // to use this, you would specify, for example
+    // .header { grid-area: head; }
+    // .sidebar { grid-area: side; }

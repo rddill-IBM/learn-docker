@@ -1,0 +1,62 @@
+/**
+* Colors ... established as sass variables
+**/ 
+$color-primary: #70d4e3;
+$color-primary-light: #ccf4f6;
+$color-primary-dark: #2f6765;
+$color-secondary: #213a93;
+
+$color-grey-light-1: #edebeb;
+$color-grey-light-2: #cac5c5;
+$color-grey-light-3: #bcbaba;
+$color-grey-light-4: #b0afaf;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+$color-edit-image: #fcf805;
+$color-edit-text: #f9f89e;
+
+$color-black: #000;
+$color-white: #fff;
+
+$sidebar-width: 16rem;
+
+$shadow-dark: 2rem 3rem 4rem rgba($color-black, .5);
+$shadow-light: 1rem 2rem 2rem rgba($color-black, .2);
+
+$top-header: 4rem;
+
+
+/**
+* Colors ... established as custom properties. They go inside a 'root' declaration and have 
+* names starting with -- instead of $
+* custom properties are accessible at run-time by html and javascript.
+**/ 
+
+:root {
+    --color-primary: #c69963;
+    --color-primary-dark: #B28451;
+    --color-secondary: #101D2C;
+
+    --color-grey-light-1: #f9f7f6;
+    --color-grey-light-2: #aaa;
+    --color-grey-light-3: #b5b2b2;
+    --color-grey-light-4: #8e979f;
+    
+    --color-grey-dark-1: #54483a;
+    --color-grey-dark-2: #6d5d4b;
+
+    --color-black: #000;
+    --color-white: #fff;
+
+    --shadow-dark: 1rem 2rem 2rem rgba(var(--color-black), .5);
+    --shadow-light: 1rem 2rem 4rem rgba(var(--color-black), .1);
+
+    --line: 2px solid var(--color-grey-light-3);
+
+    --font-primary: 'Nunito', sans-serif;
+    --font-display: 'Josefin Sans', sans-serif;
+    }
+    

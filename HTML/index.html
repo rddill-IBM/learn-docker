@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        
+        <title>IBM Client Power Network &mdash; Understanding your client</title>
+    </head>
+    <!--
+        emmet trick: .container>.item.item--$*6
+        Results in the following. 
+        Note that the '$' is an iterator and is replaced by the numbers 1-6 
+        <div class="container">
+            <div class="item item--1"></div>
+            <div class="item item--2"></div>
+            <div class="item item--3"></div>
+            <div class="item item--4"></div>
+            <div class="item item--5"></div>
+            <div class="item item--6"></div>
+        </div>
+    -->
+    <body class="container">
+        <header class="heading">
+            <div class="heading__product">IBM Client Network</div>
+            <a href="#" class="heading__clients" id="showNames">Show Names</a>
+            <span>
+                <input type="text" class="heading__search">
+                <div class="heading__search-icon"></div>
+            </span>
+            <img src="img/Bob Dill 400x400.jpg" alt="" class="heading__person">
+        </header>
+        <div class="account">
+            <ul class="account__list">
+                <li class="account__item">Account #1</li>
+                <li class="account__item">Account #2</li>
+                <li class="account__item">Account #3</li>
+            </ul>
+        </div>
+        <div class="client">
+            <div id="clist" class="client__list">
+                <img src="img/x.png" alt="" id = "client__list--toggle" class="client__list--toggle">
+                <div class="client__list--name">Person Long Name 1</div>
+                <div class="client__list--name">Person Long Name 2</div>
+                <div class="client__list--name">Person Long Name 3</div>
+                <div class="client__list--name">Person Long Name 4</div>
+                <div class="client__list--name">Person Long Name 5</div>
+                <div class="client__list--name">Person Long Name 6</div>
+                <div class="client__list--name">Person Long Name 7</div>
+                <div class="client__list--name">Person Long Name 8</div>
+                <div class="client__list--name">Person Long Name 9</div>
+                <div class="client__list--name">Person Long Name 10</div>
+                <div class="client__list--name">Person Long Name 11</div>
+                <div class="client__list--name">Person Long Name 12</div>
+                <div class="client__list--name">Person Long Name 13</div>
+                <div class="client__list--name">Person Long Name 14</div>
+                <div class="client__list--name">Person Long Name 15</div>
+                <div class="client__list--name">Person Long Name 16</div>
+                <div class="client__list--name">Person Long Name 17</div>
+                <div class="client__list--name">Person Long Name 18</div>
+                <div class="client__list--name">Person Long Name 19</div>
+                <div class="client__list--name">Person Long Name 20</div>
+                <div class="client__list--name">Person Long Name 21</div>
+                <div class="client__list--name">Person Long Name 22</div>
+                <div class="client__list--name">Person Long Name 23</div>
+                <div class="client__list--name">Person Long Name 24</div>
+                <div class="client__list--name">Person Long Name 25</div>
+                <div class="client__list--name">Person Long Name 26</div>
+                <div class="client__list--name">Person Long Name 27</div>
+                <div class="client__list--name">Person Long Name 28</div>
+                <div class="client__list--name">Person Long Name 29</div>
+                <div class="client__list--name">Person Long Name 30</div>
+                <div class="client__list--name">Person Long Name 31</div>
+                <div class="client__list--name">Person Long Name 32</div>
+                <div class="client__list--name">Person Long Name 33</div>
+                <div class="client__list--name">Person Long Name 34</div>
+                <div class="client__list--name">Person Long Name 35</div>
+                <div class="client__list--name">Person Long Name 36</div>
+                <div class="client__list--name">Person Long Name 37</div>
+                <div class="client__list--name">Person Long Name 38</div>
+                <div class="client__list--name">Person Long Name 39</div>
+                <div class="client__list--name">Person Long Name 40</div>
+                <div class="client__list--name">Person Long Name 41</div>
+                <div class="client__list--name">Person Long Name 42</div>
+                <div class="client__list--name">Person Long Name 43</div>
+                <div class="client__list--name">Person Long Name 44</div>
+                <div class="client__list--name">Person Long Name 45</div>
+                <div class="client__list--name">Person Long Name 46</div>
+                <div class="client__list--name">Person Long Name 47</div>
+                <div class="client__list--name">Person Long Name 48</div>
+                <div class="client__list--name">Person Long Name 49</div>
+                <div class="client__list--name">Person Long Name 50</div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h1>Responsive Organization Chart (updated)</h1>
+                    <figure class="org-chart cf">
+                      <div class="board ">
+                        <ul class="columnThree">
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                        </ul>
+                        <ul class="columnOne">
+                          <li>
+                            <span class="lvl-b">
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                        </ul>
+                        <ul class="columnTwo">
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                        </ul>
+                        <ul class="columnTwo">
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                          <li>
+                            <span>
+                                 <strong>Position Name</strong>
+                                 <br>Name Surname
+                                 <br>AA
+                                 </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <ul class="departments ">
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department central">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>CC
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="department ">
+                          <span class="lvl-b">
+                              <strong>Position Name</strong>
+                              <br>Name Surname
+                              <br>AB
+                              </span>
+                          <ul class="sections">
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>AA
+                                    </span>
+                            </li>
+                            <li class="section"> <span>
+                                    <strong>Position Name</strong>
+                                    <br>Name Surname
+                                    <br>BB
+                                    </span>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </figure>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <div class="footer">
+                <button class="btn footer__button">Add</button>
+                <button class="btn footer__button">Edit</button>
+                <button class="btn footer__button">Save</button>
+                <button class="btn footer__button">Delete</button>
+                <button class="btn footer__button">Cancel</button>
+        </div>
+    </body>
+    <script src="/js/jquery-3.1.0.js"></script>
+    <script src="/js/init.js"></script>
+    </html>

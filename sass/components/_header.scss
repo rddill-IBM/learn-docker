@@ -1,0 +1,43 @@
+.heading {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: max-content 1fr 10rem;
+    @include respond(phone) {
+        grid-template-columns: max-content max-content 1fr 5rem;
+        grid-column-gap: 2rem;
+    }
+    align-items: center;
+    justify-items: center;
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 1.5rem;
+
+    &__search {
+        @include respond(phone) {
+            width: 10rem;
+        }
+    }
+
+    &__clients {
+        display: none;
+        @include respond(phone) {
+            &:link, &:visited {
+                font-size: 1.5rem;
+                color: currentColor;
+                text-decoration: none;
+            }
+            &:active {
+                color: $color-primary;
+            }
+            display: inline-block;
+        }
+    }
+
+
+    &__person {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+}

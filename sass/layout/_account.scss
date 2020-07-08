@@ -1,0 +1,35 @@
+.account {
+    display: none;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    max-width: 30rem;
+    background-color: $color-primary-dark;
+
+    &__list {
+        display: inline grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(3rem, min-content);
+        align-items: center;
+        justify-items: center;
+        grid-row-gap: 2rem;
+        }
+    
+        &__item {
+            font-size: 2.5rem;
+            font-weight: 400;
+            background-color: $color-primary;
+            color: $color-black;
+            list-style-type: none;
+            padding: 0.5rem 2rem;
+            border-radius: .5rem;
+            box-shadow: $shadow-dark;
+            &:hover {
+                transform: scale(1.25);
+                transition: all .2s;
+            }
+        }
+}
+.account.active {
+    display: inline grid;
+    
+}

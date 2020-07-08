@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    box-shadow: $shadow-light;
+    display: grid;
+    grid-template-rows: $top-header 90vh 4rem;
+    @include respond(tablet-p) {
+        grid-template-rows: $top-header 82vh max-content;
+        margin: 0;
+    }
+    @include respond(phone) {
+        grid-template-rows: $top-header 90vh max-content;
+        margin: 0;
+    }
+    grid-template-columns: [sidebar-start] $sidebar-width [sidebar-end full-start] 1fr [full-end];
+    // select container and all direct children
+    //& > * {
+    //    font-size: 3rem;
+    //}
+}
