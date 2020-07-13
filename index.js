@@ -26,13 +26,13 @@ let mime = require('mime');
 let bodyParser = require('body-parser');
 let cookieParser = require('cookie-parser');
 let cfenv = require('cfenv');
-let redis = require('redis');
+// let redis = require('redis');
 
 let appEnv = cfenv.getAppEnv();
 let app = express();
-let client = redis.createClient({host: 'redis-server', port: 6379});
+// let client = redis.createClient({host: 'redis-server', port: 6379});
 // redis-server is defined as a service in the docker-compose.yml file
-client.set('visits', 0);
+// client.set('visits', 0);
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,13 +45,6 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/HTML'));
 app.use(bodyParser.json());
-app.get('/', (req, res, next) => {
-    client.get('visits', (err, visits) => {
-        console.log('visits: ' + visits);
-        client.set('visits', parseInt(visits) + 1);
-    });
-    next();
-});
 
 // Define your own router file in controller folder, export the router, add it into the index.js.
 // app.use('/', require("./controller/yourOwnRouter"));
