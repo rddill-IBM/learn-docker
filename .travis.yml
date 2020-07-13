@@ -11,12 +11,21 @@ script:
 
 deploy: 
     # for deploying to AWS
-    provider: elasticbeanstalk # this is AWS Docker support
-    region: "us-east-2" # or whichever region used in AWS to create initial holding space for app
-    app: "learn-docker" # user provided name at AWS App creation time
-    bucket_name: "elasticbeanstalk-us-east-2-692974209456" # bucket name found, complete with UID, from S3 search after initial app creation in AWS
-    bucket-path: "learn-docker" # same as app name
+    # this is AWS Docker support
+    provider: elasticbeanstalk 
+    # or whichever region used in AWS to create initial holding space for app
+    region: "us-east-2" 
+    # user provided name at AWS App creation time
+    app: "learn-docker" 
+    env: "LearnDocker-env"
+    # bucket name found, complete with UID, from S3 search after initial app creation in AWS
+    bucket_name: "elasticbeanstalk-us-east-2-692974209456" 
+    # same as app name
+    bucket-path: "learn-docker" 
     on:
-        branch: master # which git branch change will cause this set of instructions to be executed 
-    access_key_id: $AWS_ACCESS_KEY # this is stored in travis for this git repo
-    secret_access_key: $AWS_SECRET_KEY # this is stored in travis for this git repo
+        # which git branch change will cause this set of instructions to be executed 
+        branch: master 
+    # this is stored in travis for this git repo
+    access_key_id: $AWS_ACCESS_KEY 
+    # this is stored in travis for this git repo
+    secret_access_key: $AWS_SECRET_KEY 
