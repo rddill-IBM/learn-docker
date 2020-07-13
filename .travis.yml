@@ -17,6 +17,7 @@ deploy:
     region: "us-east-2" 
     # user provided name at AWS App creation time
     app: "learn-docker" 
+    # AWS Environment Name. Found in the elasitic beanstalk space for the app
     env: "LearnDocker-env"
     # bucket name found, complete with UID, from S3 search after initial app creation in AWS
     bucket_name: "elasticbeanstalk-us-east-2-692974209456" 
