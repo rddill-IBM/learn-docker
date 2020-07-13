@@ -17,6 +17,6 @@ deploy:
     bucket_name: "elasticbeanstalk-us-east-2-692974209456" # bucket name found, complete with UID, from S3 search after initial app creation in AWS
     bucket-path: "learn-docker" # same as app name
     on:
-        branch: master # which git branch change will cause this set of instructions to be executed
+        branch: master # which git branch change will cause this set of instructions to be executed 
     access_key_id: $AWS_ACCESS_KEY # this is stored in travis for this git repo
     secret_access_key: $AWS_SECRET_KEY # this is stored in travis for this git repo
