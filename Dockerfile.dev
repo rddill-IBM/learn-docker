@@ -1,0 +1,15 @@
+FROM node:alpine
+
+WORKDIR /usr/app
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+# both the devBuild.sh script and the docker-compose.yml file create a volume
+# which points to the source folder. This, in dev, allows me to have the container running
+# and continuously update my local machine and have the docker contained web
+# server use the updated code. While this obviates the need for the Copy . . command,
+# it is kept here for transition to other environments, such as K8s
+
+CMD ["npm", "run", "start"]
